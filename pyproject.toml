@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "action-claim-guard-local"
+version = "0.1.0"
+description = "Receipt-grounded action claim verification for local AI assistants"
+requires-python = ">=3.11"
+readme = "README.md"
+license = "PolyForm-Noncommercial-1.0.0"
+authors = [{name = "Action Claim Guard contributors"}]
+keywords = ["local-ai", "agent", "verification", "receipts", "claims"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = []
+
+[project.scripts]
+action-claim-guard = "action_claim_guard.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

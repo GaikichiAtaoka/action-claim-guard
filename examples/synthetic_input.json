@@ -1,0 +1,12 @@
+{
+  "user_message": "保存できた？",
+  "reply": "ファイルに保存しました。",
+  "receipts": [
+    {
+      "action": "file.write",
+      "ok": true,
+      "status": "completed",
+      "action_id": "synthetic-001"
+    }
+  ]
+}
