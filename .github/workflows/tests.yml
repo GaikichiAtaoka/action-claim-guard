@@ -22,3 +22,7 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: CLI smoke test
         run: action-claim-guard --input examples/synthetic_input.json
+      - name: Agent integration examples (supported and unsupported claims)
+        run: |
+          python examples/agent_integration.py > /dev/null
+          python examples/agent_integration.py --skip-write > /dev/null

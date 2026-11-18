@@ -22,6 +22,23 @@ and optional safer replacement wording.
   level validate_response_claims API, but its results **do not block** replies.
   Deterministic extracted claims are authoritative for this library's verdict.
 
+## AIへの導入ガイド（日本語）
+
+**[自分のAIエージェントへの組み込み手順](docs/INTEGRATION_JA.md)** では、
+操作の実行器がreceiptを作る場所、候補回答の表示前チェック、ブロック時の処理を説明します。
+
+動く最小統合サンプル: [examples/agent_integration.py](examples/agent_integration.py)
+
+~~~bash
+python -m pip install -e .
+python examples/agent_integration.py
+python examples/agent_integration.py --skip-write
+~~~
+
+最初の実行では一時ファイルへの実際の書き込みが成功して `pass`、
+2回目は書き込まず「保存しました」と言うと `blocked` になります。
+LLM・ネットワーク・個人データ不要で、AIアプリの「操作 → receipt → 回答検証」を再現できます。
+
 ## Quick start
 
 Python 3.11+:
